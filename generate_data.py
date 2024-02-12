@@ -12,10 +12,10 @@ import sys
 import os
 
 print("Loading tokenizer")
-tokenizer = AutoTokenizer.from_pretrained("baffo32/decapoda-research-llama-7B-hf")
+tokenizer = AutoTokenizer.from_pretrained("huggyllama/llama-7b")
 print("Tokenizer loaded!")
 print("Loading model")
-model = AutoModelForCausalLM.from_pretrained("baffo32/decapoda-research-llama-7B-hf")
+model = AutoModelForCausalLM.from_pretrained("huggyllama/llama-7b")
 model = model.cuda()
 print("Model loaded!")
 
