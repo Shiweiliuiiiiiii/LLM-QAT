@@ -19,7 +19,7 @@ model = AutoModelForCausalLM.from_pretrained("huggyllama/llama-7b")
 model = model.cuda()
 print("Model loaded!")
 
-n_vocab = 500 # number of initial tokens for synthesizing data on each GPU.
+n_vocab = 500*64 # number of initial tokens for synthesizing data on each GPU.
 
 i_start = sys.argv[1]
 if os.path.exists("gen_data/gen.chunk."+str(i_start).zfill(2)+".jsonl"):
